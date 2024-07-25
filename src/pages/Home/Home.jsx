@@ -1,7 +1,11 @@
+import FormLogin from "../../components/FormLogin";
+import NavBar from "../../components/NavBar";
+
 function Home() {
     return(
         <>
-        <h1>Pagina Home</h1>
+            <NavBar/>
+            <FormLogin />
         </>
     )
 }
