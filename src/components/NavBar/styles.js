@@ -16,5 +16,4 @@ export const Icon = styled.img`
 
 export const Title = styled.h1`
     font-size: 16px;
-    colo
 `
