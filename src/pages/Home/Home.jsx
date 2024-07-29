@@ -1,3 +1,4 @@
+import Footer from "../../components/Footer";
 import FormLogin from "../../components/FormLogin";
 import NavBar from "../../components/NavBar";
 
@@ -6,6 +7,7 @@ function Home() {
         <>
             <NavBar/>
             <FormLogin />
+            <Footer/>
         </>
     )
 }

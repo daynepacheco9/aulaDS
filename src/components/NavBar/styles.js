@@ -7,11 +7,12 @@ export const NavContainer = styled.nav`
     width: 100vw;
     height: 5vh;
     background-color: darkcyan;
+    bottom: 0;
 `
 
 export const Icon = styled.img`
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
 `
 
 export const Title = styled.h1`

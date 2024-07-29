@@ -1,5 +1,13 @@
 import styled from 'styled-components'
 
+export const PagCont = styled.div`
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
 export const FormContainer = styled.div`
     display: flex;
     align-items: center;
@@ -10,7 +18,7 @@ export const FormContainer = styled.div`
     padding: 20px;
     width: 25vw;
     height: 32vh;
-    margin: 20vh auto;
+    /* margin: 20vh auto; */
 `
 
 export const Title = styled.h1`

@@ -1,6 +1,6 @@
 import { NavContainer , Icon, Title} from "./styles";
 import Ursinho from "/mascara-de-urso.png"
-import Logout from "/sair-do-usuario.png"
+
 
 const NavBar = () => {
     return(
@@ -8,7 +8,7 @@ const NavBar = () => {
             <NavContainer>
                 <Icon src={Ursinho} ></Icon>
                 <Title>Aula Nicolas</Title>
-                <Icon src={Logout}></Icon>
+                <h2></h2>
             </NavContainer>
         </>
     )
