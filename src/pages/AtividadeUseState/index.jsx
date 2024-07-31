@@ -1,11 +1,12 @@
-import React,{useState} from "react"
+import React,{useState, useEffect} from "react"
 import "./styles.css"
 
-const AtividadeUseState = (props) =>{
+const AtividadeUseState = () =>{
     const [view ,setView]= useState(true);
     const [changeColor, setChangeColor] = useState('white')
     const [cont , setCont] = useState(0)
     const [name, setName] = useState('');
+    const [today, setDate] = React.useState(new Date());
 
     const handleColor = () =>{
         setChangeColor(e => e == "white" ? "green" : "white")
@@ -15,8 +16,17 @@ const AtividadeUseState = (props) =>{
         setCont(cont + 1);
     }
 
-    const handleInputName = () => {
-        setName()
+    useEffect(() => {
+        const timer = setInterval(() => { 
+        setDate(new Date());
+      }, 1000);
+      return () => {
+        clearInterval(timer); 
+      }
+    }, []);
+
+    const formatTime = (d) => {
+        return d.toLocaleTimeString();
     }
 
 
@@ -24,12 +34,15 @@ const AtividadeUseState = (props) =>{
     return(
         <>
         <div id="pageContainer">
-            { view && <p>Se clicar no "ok" eu sumo</p>}
+            { view && <p>Se clicar no ok eu sumo</p>}
             <button onClick={() => setView(!view)}>OK</button> 
         </div>
         <div style={{background: changeColor}}>
             <p>Agora é pra mudar o meu fundinho</p>
             <button onClick={handleColor}>Muda a Cor</button>
+        </div>
+        <div>
+            <p>{formatTime(today)}</p>
         </div>
         <div>
             <p>contando {cont}</p>
@@ -38,11 +51,11 @@ const AtividadeUseState = (props) =>{
         <div>
             <form>
                 <label>Insira seu Nome:</label>
-                <input type="text" onChange={() => setName(name)}/>
-                <button onClick={() => setName(name)} >enviado</button>
+                <input type="text" onChange={e => setName(e.target.value)} />
+                <button>enviado</button>
             </form>
 
-            <p onChange={name}>Bem-vindo, {name}</p>
+            <p>Bem-vindo, {name}</p>
         </div>
         </>
     )
