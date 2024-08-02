@@ -6,7 +6,7 @@ export const NavContainer = styled.nav`
     align-items: center;
     width: 100vw;
     height: 5vh;
-    background-color: darkcyan;
+    background-color: #16a34a;
     bottom: 0;
 `
 

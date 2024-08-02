@@ -6,7 +6,7 @@ export const FooterContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: darkcyan;
+    background-color: #16a34a;
 ` 
 
 export const Text = styled.h2`
